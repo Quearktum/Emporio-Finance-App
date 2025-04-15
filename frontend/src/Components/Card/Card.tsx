@@ -1,25 +1,24 @@
 import React, { JSX } from 'react';
 import './Card.css';
 import { compileFunction } from 'vm';
+import { CompanySearch } from '../../company';
 
 interface Props {
-    companyName: string;
-    ticker: string;
-    price: number;
+    id : string;
+    searchResult: CompanySearch;
 }
 
-const Card: React.FC<Props> = ({ companyName, ticker, price }: Props): JSX.Element => {
+const Card: React.FC<Props> = ({ id, searchResult}: Props): JSX.Element => {
     return (
         <div className='card'>
             <img
-                src="https://kpopping.com/documents/85/3/250316-aespa-NINGNING-at-SYNK-PARALLEL-LINE-ENCORE-IN-SEOUL-DAY-2-documents-9.jpeg?v=73859"
-                alt="Image"
+                alt="Company Logo"
             />
             <div className='details'>
-                <h2>{companyName} ({ticker})</h2>
-                <p>${price}</p>
+                <h2>{searchResult.name} ({searchResult.symbol})</h2>
+                <p>{searchResult.currency}</p>
             </div>
-            <p className='infon'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, enim aut? Totam exercitationem tempore at quaerat maxime velit earum ea, eveniet aut. Deserunt perspiciatis iste assumenda repudiandae suscipit quae voluptates.</p>
+            <p className='infon'>{searchResult.exchange} - {searchResult.exchangeFullName}</p>
         </div>
     )
 }
