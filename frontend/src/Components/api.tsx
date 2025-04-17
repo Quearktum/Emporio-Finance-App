@@ -9,9 +9,9 @@ interface SearchResponse {
 export const searchCompanies = async (query: string) => {
     try {
         const data = await axios.get<SearchResponse>(
-            `https://financialmodelingprep.com/api/v3/search?query=${query}&apikey=${process.env.REACT_APP_API_KEY}`
+            `https://financialmodelingprep.com/stable/search-symbol?query=${query}&apikey=${process.env.REACT_APP_API_KEY}`
         );
-        return data.data;
+        return data;
     } catch (error) {
         if (axios.isAxiosError(error)) {
             console.log("error message: ", error.message);
@@ -25,12 +25,11 @@ export const searchCompanies = async (query: string) => {
 
 export const getCompanyProfile = async (query:string) => {
     try{
-        const data = await axios.get<CompanyProfile[]>(
-            `https://financialmodelingprep.com/api/v3/profile/${query}?apikey=${process.env.REACT_APP_API_KEY}`
+        const data =await axios.get<CompanyProfile[]>(
+            `https://financialmodelingprep.com/stable/profile?symbol=${query}&apikey=${process.env.REACT_APP_API_KEY}`
         );
         return data;
     } catch (error:any) {
         console.log("error message from API: ", error.message);
-        throw error; // Re-throw the error so it can be caught by the component
     }
 }
