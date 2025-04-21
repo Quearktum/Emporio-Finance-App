@@ -1,26 +1,15 @@
 import React from 'react'
 import { testIncomeStatementData } from './testData'
 
+type Props = {
+    config: any;
+    data: any;
+}
 
-const data = testIncomeStatementData;
 
-type Props = {}
-type Company = (typeof data)[0];
-
-const configs = [
-    {
-        label: "Year",
-        render: (company: Company) => company.acceptedDate
-    },
-    {
-        label: "Cost of Revenue",
-        render: (company: Company) => company.costOfRevenue
-    }
-]
-
-const Table = (props: Props) => {
+const Table = ({config, data}: Props) => {
     // Map headers
-    const renderedHeaders = configs.map((config: any) => {
+    const renderedHeaders = config.map((config: any) => {
         return (
             <th key={config.label}
                 className='p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
@@ -30,10 +19,10 @@ const Table = (props: Props) => {
     })
 
     // Map Data
-    const renderedRow = data.map((company) => {
+    const renderedRow = data.map((company: any) => {
         return (
             <tr key={company.cik}>
-                {configs.map((val: any) => {
+                {config.map((val: any) => {
                     return (
                         <td className='p-4 whitespace-nowrap text-sm font-normal text-gray-900'>
                             {val.render(company)}
