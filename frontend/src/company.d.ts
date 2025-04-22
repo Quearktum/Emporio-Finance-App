@@ -230,13 +230,13 @@ export interface CompanyCashFlow {
   purchasesOfInvestments: number;
   salesMaturitiesOfInvestments: number;
   otherInvestingActivites: number;
-  netCashUsedForInvestingActivites: number;
+  netCashProvidedByInvestingActivities: number;
   debtRepayment: number;
   commonStockIssued: number;
   commonStockRepurchased: number;
   dividendsPaid: number;
   otherFinancingActivites: number;
-  netCashUsedProvidedByFinancingActivities: number;
+  netCashProvidedByFinancingActivities: number;
   effectOfForexChangesOnCash: number;
   netChangeInCash: number;
   cashAtEndOfPeriod: number;
