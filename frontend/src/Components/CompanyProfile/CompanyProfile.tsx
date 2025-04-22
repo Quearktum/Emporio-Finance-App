@@ -3,6 +3,7 @@ import { CompanyKeyMetrics } from '../../company';
 import { useOutletContext } from 'react-router-dom';
 import { getKeyMetrics } from '../api';
 import RatioList from '../RatioList/RatioList';
+import Spinner from '../Spinner/Spinner';
 
 interface Props { }
 
@@ -38,7 +39,7 @@ const tableConfig = [
   },
   {
     label: "Book Value Per Share TTM",
-    render: (company: CompanyKeyMetrics) => company.freeCashFlowToFirmTTM, 
+    render: (company: CompanyKeyMetrics) => company.freeCashFlowToFirmTTM,
     subTitle:
       "Book value per share indicates a firm's net asset value (total assets - total liabilities) on per share basis",
   },
@@ -84,14 +85,7 @@ const CompanyProfile = (props: Props) => {
         <div>
           <RatioList data={companyData} config={tableConfig} />
         </div>
-      ) : (
-        <div>
-            <div className="bg-white shadow rounded-lg ml-4 mt-4 mb-4 p-4 sm:p-6 h-full">
-                <div className="divide-y divide-gray-200">
-                    Loading...
-                </div>
-            </div>
-        </div>      )}
+      ) : (<Spinner />)}
     </div>
   )
 }
