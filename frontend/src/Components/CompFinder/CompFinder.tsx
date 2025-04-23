@@ -16,11 +16,11 @@ const CompFinder = ({ticker}: Props) => {
         }
         getComp();
     }, [ticker]);
-    
+
   return (
     <div className='inline-flex round-md shadow-sm m-4'>
-        {companyData?.map((ticker:CompanyCompData) => {
-            return <CompFinderItem ticker={ticker.symbol}/>
+        {companyData?.map((company:CompanyCompData) => {
+            return <CompFinderItem ticker={company.symbol}/>
         })}
     </div>
   )

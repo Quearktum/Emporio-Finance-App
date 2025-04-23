@@ -31,7 +31,7 @@ const CompanyPage = (props: Props) => {
             <Tile title='Company Name' subTitle={company.companyName} />
             <Tile title='Sector' subTitle={company.sector} />
             <Tile title='Country' subTitle={company.country} />
-            <Tile title='Price' subTitle={company.price.toString()} />
+            <Tile title='Price' subTitle={"$" + company.price.toString()} />
 
             <CompFinder ticker={company.symbol}/>
 
