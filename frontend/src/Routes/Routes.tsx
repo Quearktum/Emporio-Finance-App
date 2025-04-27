@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
-        errorElement: <Error404 />,
+errorElement: <Error404 />,
         children: [
             {
                 path: "", 
@@ -48,7 +48,7 @@ export const router = createBrowserRouter([
                         path: "cash-flow",
                         element: <CashFlow />
                     },
-                                    ]
+                ]
             },
         ]
     }

@@ -28,3 +28,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# .NET / C# Backend
+/api/bin/
+/api/obj/
+/api/[Bb]in/
+/api/[Oo]bj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+.vs/
+/api/Properties/launchSettings.json
+*~
