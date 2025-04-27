@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# .NET / C# Backend (assuming it's in 'api')
+api/bin/
+api/obj/
+api/[Oo]bj/
+api/[Bb]in/
+api/Properties/launchSettings.json
+*.csproj.user
+*.sln.docstates
+*.suo
+.vs/
