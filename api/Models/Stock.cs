@@ -18,7 +18,7 @@ namespace api.Models
         public string Industry { get; set; } = string.Empty;
         public long MarketCap { get; set; }
 
-        public List<Comments> Comments { get; set; } = new List<Comments>();
+        public List<Comment> Comments { get; set; } = new List<Comment>();
 
 
     }
