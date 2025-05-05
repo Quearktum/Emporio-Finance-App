@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using api.DTOs.Comment;
 using api.Interfaces;
 using api.Mappers;
+using api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -58,6 +59,34 @@ namespace api.Controller
             await _commentRepo.CreateAsync(commentModel);
 
             return CreatedAtAction(nameof(GetById), new { id = commentModel }, commentModel.ToCommentDto());
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var commentModel = await _commentRepo.DeleteAsync(id);
+
+            if (commentModel == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(commentModel);
+        }
+
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCommentDto updateDto)
+        {
+            var commentModel = await _commentRepo.UpdateAsync(id, updateDto);
+
+            if (commentModel == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(commentModel.ToCommentDto());
         }
     }
 }
