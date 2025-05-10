@@ -9,6 +9,9 @@ import DesignPage from "../Pages/DesignPage/DesignPage";
 import BalanceSheet from "../Components/BalanceSheet/BalanceSheet";
 import CashFlow from "../Components/CashFlow/CashFlow";
 import Error404 from "../Pages/Error404/Error404";
+import LoginPage from "../Pages/LoginPage/LoginPage";
+import RegisterPage from "../Pages/RegisterPage/RegisterPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 export const router = createBrowserRouter([
     {
@@ -21,8 +24,16 @@ errorElement: <Error404 />,
                 element: <HomePage />
             },
             {
+                path: "login",
+                element: <LoginPage/>
+            },
+            {
+                path: "register",
+                element: <RegisterPage />
+            },
+            {
                 path: "search", 
-                element: <SearchPage />
+                element: <ProtectedRoute><SearchPage /></ProtectedRoute>
             },
             {
                 path: "design-guide",
@@ -30,7 +41,7 @@ errorElement: <Error404 />,
             },
             {
                 path: "company/:ticker", 
-                element: <CompanyPage />, 
+                element: <ProtectedRoute><CompanyPage /></ProtectedRoute>, 
                 children: [
                     {
                         path: "company-profile",

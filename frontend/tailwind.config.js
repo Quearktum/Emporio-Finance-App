@@ -10,6 +10,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        emporioPrimary: "#a07035",
+        emporioSecondary: "#363636",
         lightBlue: "hsl(215.02, 98.39%, 51.18%)",
         darkBlue: "hsl(213.86, 58.82%, 46.67%)",
         lightGreen: "hsl(156.62, 73.33%, 58.82%)",
