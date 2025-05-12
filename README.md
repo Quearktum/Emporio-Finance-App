@@ -1,6 +1,8 @@
 # Emporio - Financial Markets App
 
-![Emporio Logo](frontend/src/Components/Navbar/logo.png)
+<div style="background-color: white; padding: 20px; display: inline-block; border-radius: 10px;">
+  <img src="frontend/src/Components/Navbar/logo.png" alt="Emporio Logo">
+</div>
 
 *Modern Financial Analysis & Portfolio Management*
 
@@ -89,4 +91,3 @@ Acknowledgments
 Financial Modeling Prep for providing financial data APIs
 Tailwind CSS for the styling framework
 React and .NET communities for documentation and support
-Developed with ❤️ by [Your Name/Team]
