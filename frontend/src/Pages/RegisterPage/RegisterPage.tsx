@@ -3,6 +3,7 @@ import { useAuth } from "../../Context/useAuth";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -35,7 +36,7 @@ const RegisterPage = (props: Props) => {
         <div className="w-full bg-white rounded-lg shadow md:mb-20 sm:max-w-md xl:p-0 bg-white">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl">
-              Sign in to your account
+              Sign up to your account
             </h1>
             <form
               className="space-y-4 md:space-y-6"
@@ -104,13 +105,13 @@ const RegisterPage = (props: Props) => {
                 Sign in
               </button>
               <p className="text-sm font-light text-stone-500 dark:text-gray-400">
-                Don’t have an account yet?{" "}
-                <a
-                  href="#"
+                ALready have an account?{" "}
+                <Link
+                  to="/login"
                   className="font-medium text-emporioPrimary hover:underline dark:text-primary-500"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </form>
           </div>

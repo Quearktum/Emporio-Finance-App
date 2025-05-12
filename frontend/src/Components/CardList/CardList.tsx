@@ -11,6 +11,9 @@ interface Props {
 const CardList: React.FC<Props> = ({ searchResults, onPortfolioCreate }: Props): JSX.Element => {
   return (
     <div>
+                  <h2 className="mb-3 mt-20 text-3xl font-semibold text-center md:text-4xl">
+                Search Results
+            </h2>
       {searchResults.length > 0 ? (
         searchResults.map((result) => {
           return <Card id={result.symbol} key={uuidv4()} searchResult={result} onPortfolioCreate={onPortfolioCreate} />;
