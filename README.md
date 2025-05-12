@@ -1,10 +1,8 @@
 # Emporio - Financial Markets App
 
-<div style="background-color: white; padding: 20px; display: inline-block; border-radius: 10px;">
-  <img src="frontend/src/Components/Navbar/logo.png" alt="Emporio Logo">
-</div>
+![Emporio Logo](frontend/src/Components/Navbar/logo.png)
 
-*Modern Financial Analysis & Portfolio Management*
+_Modern Financial Analysis & Portfolio Management_
 
 ## Overview
 
@@ -22,6 +20,7 @@ Emporio is a comprehensive financial markets application that allows users to se
 ## Technology Stack
 
 ### Frontend
+
 - **React 19** - Modern UI framework with hooks and functional components
 - **TypeScript** - Type-safe JavaScript for improved developer experience
 - **React Router** - Client-side routing and navigation
@@ -34,6 +33,7 @@ Emporio is a comprehensive financial markets application that allows users to se
 - **React Spinners** - Loading indicators
 
 ### Backend
+
 - **.NET 9** - Modern, high-performance server framework
 - **ASP.NET Core Web API** - RESTful API development
 - **Entity Framework Core** - ORM for database operations
@@ -44,6 +44,7 @@ Emporio is a comprehensive financial markets application that allows users to se
 - **Repository Pattern** - Clean architecture implementation
 
 ### External APIs
+
 - **Financial Modeling Prep API** - Financial data provider for stock information
 
 ## Getting Started
@@ -58,18 +59,21 @@ Emporio is a comprehensive financial markets application that allows users to se
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/finance_app.git
    cd Finance_app
    ```
 
 2. **Set up the backend**
+
    ```bash
    cd api
    dotnet restore
    dotnet ef database update
    dotnet run
    ```
+
    The API will be available at `http://localhost:5165`
 
 3. **Set up the frontend**
@@ -81,13 +85,14 @@ Emporio is a comprehensive financial markets application that allows users to se
    npm start
    ```
    The app will be available at `http://localhost:3000`
-Commit your changes (git commit -m 'Add some amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+   Commit your changes (git commit -m 'Add some amazing feature')
+   Push to the branch (git push origin feature/amazing-feature)
+   Open a Pull Request
+   License
+   This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
-Financial Modeling Prep for providing financial data APIs
-Tailwind CSS for the styling framework
-React and .NET communities for documentation and support
+## Acknowledgments
+
+- Financial Modeling Prep for providing financial data APIs
+- Tailwind CSS for the styling framework
+- React and .NET communities for documentation and support
